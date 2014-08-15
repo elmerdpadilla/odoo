@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<!-- Main Menu -->
+		<menuitem name="HMS PLUS" id="medical_menu" icon="STOCK_ZOOM_IN"/>
+		
+		<!-- Patient -->
+		<menuitem name="Patients" id="medical_patients_menu" parent="medical_menu" sequence="2"/>
+		<menuitem name="Appointments" id="medical_appointment_menu" parent="medical_menu" sequence="3"/>	
+		
+		<!-- Config Menu -->
+		<menuitem name="Configuration" id="medical_conf_menu" parent="medical_menu" sequence="13"/>
+		<menuitem name="Diseases" id="medical_conf_pathology" parent="medical_conf_menu" sequence="4"/>
+		<menuitem name="Medical Procedures" id="medical_conf_procedure" parent="medical_conf_menu" sequence="5"/>
+		<menuitem name="Health Centers" id="medical_conf_hospital" parent="medical_conf_menu" sequence="6"/>
+		<menuitem name="Operational Areas" id="medical_conf_operational_areas" parent="medical_conf_menu" sequence="7"/>
+		<menuitem name="Physicians" id="medical_conf_physicians" parent="medical_conf_menu" sequence="8"/>
+		<menuitem name="Medicaments" id="medical_conf_medicaments" parent="medical_conf_menu" sequence="9"/>
+		<menuitem name="Insurances" id="medical_conf_insurances" parent="medical_conf_menu" sequence="10"/>
+		<menuitem name="Misc" id="medical_conf_misc" parent="medical_conf_menu" sequence="11"/>
+		
+		<menuitem id="base.next_id_156" name="Medical" parent="base.menu_reporting" sequence="1"/>		
+		
+		<!-- Genetics -->
+		<menuitem name="Genetics" id="medical_conf_genetics" parent="medical_conf_menu"/>
+		
+		<!-- Inpatient Hospitalization -->
+		<menuitem name="Inpatient Administration" id="medical_inpatient_menu" parent="medical_menu" sequence="3"/>
+		
+		<!-- Pediatrics -->
+		<menuitem name="Pediatrics" id="medical_pediatrics_menu" parent="medical_menu" sequence="4"/>
+		
+		<!-- Laboratory Management -->
+		<menuitem name="Laboratory" id="medical_conf_laboratory" parent="medical_conf_menu" sequence="3"/>
+		<menuitem name="Laboratory" id="medical_laboratory_menu" parent="medical_menu" sequence="5"/>
+		
+		<!-- Invoices -->
+		<menuitem name="Invoices" id="medical_invoice_menu" parent="medical_menu" sequence="6"/>
+		
+		<!-- Surgery -->
+		<menuitem name="Surgery" id="medical_conf_surgery" parent="medical_menu" sequence="7"/>
+		
+			
+	</data>
+</openerp>

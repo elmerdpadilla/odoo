@@ -1,0 +1,333 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data>
+		
+		<record model="ir.ui.view" id="medical_pediatric_symptoms_checklist_view">
+			<field name="name">Pediatric Symptoms Checklist</field>
+			<field name="model">medical.patient.psc</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Pediatric Symptoms Checklist" version="7.0">
+					<sheet>												
+						<div class="oe_title">
+							<div class="oe_edit_only">
+								<label for="patient"/> 
+							</div>
+						<h1>
+							<field name="patient" default_focus="1" placeholder="Patient" />
+						</h1>                                                
+						</div>
+						<group string="General">
+							<group>
+								<field name="evaluation_date"/>
+								<field name="user_id"/>
+							</group>
+							<group>
+								<field name="evaluation_start"/>									
+							</group>
+						</group>
+						<group string="Checklist">
+							<group>
+								<field name="psc_aches_pains" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_tires_easily" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_trouble_with_teacher" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_acts_as_driven_by_motor" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_distracted_easily" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_sad_unhappy" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_feels_hopeless" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_less_interested_in_friends" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_absent_from_school" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_down_on_self" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_trouble_sleeping" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_wants_to_be_with_parents" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_takes_unnecesary_risks" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_having_less_fun" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_does_not_listen_to_rules" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_does_not_show_feelings" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_teases_others" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_takes_things_from_others" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>									
+							</group>
+							<group>
+								<field name="psc_spend_time_alone" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_fidgety" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_less_interest_in_school" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_daydreams_too_much" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_afraid_of_new_situations" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_irritable_angry" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_trouble_concentrating" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_fights_with_others" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_school_grades_dropping" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_visit_doctor_finds_ok" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_worries_a_lot" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_feels_is_bad_child" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_gets_hurt_often" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_act_as_younger" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_does_not_get_people_feelings" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_blames_others" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>
+								<field name="psc_refuses_to_share" on_change="on_change_with_psc_total(psc_aches_pains,psc_spend_time_alone,psc_tires_easily,psc_fidgety,psc_trouble_with_teacher,psc_less_interest_in_school,psc_acts_as_driven_by_motor,psc_daydreams_too_much,psc_distracted_easily,psc_afraid_of_new_situations,psc_sad_unhappy,psc_irritable_angry,psc_feels_hopeless,psc_trouble_concentrating,psc_less_interested_in_friends,psc_fights_with_others,psc_absent_from_school,psc_school_grades_dropping,psc_down_on_self,psc_visit_doctor_finds_ok,psc_trouble_sleeping,psc_worries_a_lot,psc_wants_to_be_with_parents,psc_feels_is_bad_child,psc_takes_unnecesary_risks,psc_gets_hurt_often,psc_having_less_fun,psc_act_as_younger,psc_does_not_listen_to_rules,psc_does_not_show_feelings,psc_does_not_get_people_feelings,psc_teases_others,psc_takes_things_from_others,psc_refuses_to_share)"/>									
+							</group>
+						</group>
+						<group>
+							<field name="psc_total"/>
+						</group>
+						<group string="Notes">
+							<field name="notes" nolabel="1"/>
+						</group>
+					</sheet>						
+				</form>				
+			</field>
+		</record>
+		
+		<record model="ir.ui.view" id="medical_pediatric_symptoms_checklist_tree">
+			<field name="name">Pediatric Symptoms Checklist</field>
+			<field name="model">medical.patient.psc</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Pediatric Symptoms Checklist" colors="red:psc_total&lt;=27 or psc_total&gt;=0">
+					<field name="patient"/>
+					<field name="evaluation_start"/>
+					<field name="psc_total"/>					
+				</tree>
+			</field>
+		</record>
+		
+		<record model="ir.actions.act_window" id="medical_pediatric_symptoms_checklist_evaluation">
+			<field name="name">Pediatric Symptoms Checklist</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">medical.patient.psc</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		
+		<menuitem action="medical_pediatric_symptoms_checklist_evaluation" id="medical_pediatric_symptoms_checklist_menu" parent="medical_pediatrics_menu" sequence="10"/>
+		
+		<!-- Shortcut to the Patient Evaluations -->	
+
+		<act_window domain="[('patient', '=', active_id)]" id="act_patient_pediatric_symptoms_checklist" name="PSC" res_model="medical.patient.psc" src_model="medical.patient"/>
+		
+		<!-- APGAR Scoring -->
+
+        <record model="ir.ui.view" id="medical_neonatal_apgar_view">
+            <field name="name">APGAR</field>
+			<field name="model">medical.neonatal.apgar</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">                
+                <form string="APGAR Score" version="7.0">
+					<sheet>
+                    	<group>
+							<field name="apgar_minute"/>                        
+							<field name="apgar_score"/>
+						</group>
+						<group>
+							<group>                        
+								<field name="apgar_appearance"/>							
+								<field name="apgar_pulse"/>
+								<field name="apgar_respiration"/>
+							</group>
+							<group>                        
+								<field name="apgar_grimace"/>                       
+								<field name="apgar_activity"/>
+							</group>
+						</group>
+					</sheet>
+                </form>                
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="medical_neonatal_apgar_tree">
+			<field name="name">APGAR</field>
+            <field name="model">medical.neonatal.apgar</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="APGAR Score">
+                    <field name="apgar_minute"/>
+                    <field name="apgar_score"/>
+                    <field name="apgar_appearance"/>
+                    <field name="apgar_pulse"/>
+                    <field name="apgar_grimace"/>
+                    <field name="apgar_activity"/>
+                    <field name="apgar_respiration"/>
+                </tree>                
+            </field>
+        </record>
+		
+		<!-- Newborn -->
+		
+		<record model="ir.ui.view" id="medical_patient_newborn_view">
+            <field name="name">Newborn</field>
+			<field name="model">medical.newborn</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">                
+                <form string="Newborn Info" version="7.0">
+					<header>                    
+						<button name="print_card" string="Print Newborn Card" type="object" class="oe_highlight"/>                    
+                    </header>
+					<sheet>
+						<field name="photo"  nolabel="1" class="oe_left oe_avatar" img_width="120" img_height="120" width="120" height="120" widget="image"/>
+						<div class="oe_title">
+							<div class="oe_edit_only">
+								<label for="name"/> 
+							</div>
+						<h1>
+							<field name="name" default_focus="1" placeholder="Newborn ID" />
+						</h1>                                                
+						</div>                    	
+						<group string="Main">
+							<group>
+								<group>
+									<field name="newborn_name"/>	
+									<field name="sex"/>			
+									<field name="dismissed"/>		
+									<field name="weight"/>		
+									<field name="responsible"/>
+								</group>
+								<group>
+									<field name="mother"/>
+									<field name="birth_date"/>
+									<field name="length"/>
+									<field name="cephalic_perimeter"/>																	
+								</group>
+							</group>
+							<newline/>
+							<group string="APGAR Scores">
+								<field name="apgar_scores" nolabel="1"/>
+							</group>
+							<newline/>
+							<group string="Reanimation">
+								<group>									
+									<field name="reanimation_stimulation"/>									
+									<field name="reanimation_aspiration"/>									
+									<field name="reanimation_intubation"/>									
+								</group>
+								<group>	
+									<field name="reanimation_mask"/>									
+									<field name="reanimation_oxygen"/>
+								</group>
+							</group>
+						</group>
+						<newline/>
+						<notebook>
+							<page string="Findings and Tests">
+								<group string="Neonatal Signs and Symptoms">								
+									<group>
+										<field name="meconium"/>									
+										<field name="neonatal_ortolani"/>									
+										<field name="neonatal_barlow"/>									
+										<field name="neonatal_hernia"/>									
+										<field name="neonatal_ambiguous_genitalia"/>																		
+										<field name="neonatal_erbs_palsy"/>
+									</group>
+									<group>									
+										<field name="neonatal_hematoma"/>									
+										<field name="neonatal_talipes_equinovarus"/>									
+										<field name="neonatal_palmar_crease"/>									
+										<field name="neonatal_polydactyly"/>									
+										<field name="neonatal_syndactyly"/>
+									</group>
+								</group>								
+								<group string="Neonatal Reflex Check">
+									<group>									
+										<field name="neonatal_moro_reflex"/>									
+										<field name="neonatal_grasp_reflex"/>									
+										<field name="neonatal_stepping_reflex"/>									
+										<field name="neonatal_babinski_reflex"/>
+									</group>
+									<group>									
+										<field name="neonatal_blink_reflex"/>									
+										<field name="neonatal_sucking_reflex"/>									
+										<field name="neonatal_swimming_reflex"/>									
+										<field name="neonatal_tonic_neck_reflex"/>
+									</group>
+								</group>
+								<group string="Congenital diseases">
+									<field name="congenital_diseases" nolabel="1"/>
+								</group>
+								<group string="Medication">
+									<field name="medication" nolabel="1"/>
+								</group>																
+								<group string="Tests">
+									<group>									
+										<field name="test_vdrl"/>									
+										<field name="test_toxo"/>									
+										<field name="test_chagas"/>
+									</group>
+									<group>									
+										<field name="test_billirubin"/>									
+										<field name="test_audition"/>									
+										<field name="test_metabolic"/>
+									</group>
+								</group>	
+							</page>	
+							<page string="Other">
+								<group string="Deceased">
+									<group>
+										<group>										
+											<field name="bd"/>										
+											<field name="died_at_delivery"/>										
+											<field name="died_at_the_hospital"/>
+										</group>
+										<group>										
+											<field name="died_being_transferred"/>										
+											<field name="tod"/>										
+											<field name="cod"/>
+										</group>
+									</group>
+								</group>
+							</page>							
+							<page string="Notes">								 
+								<field name="notes" nolabel="1"/>								
+							</page>		
+						</notebook>
+					</sheet>
+                </form>
+            </field>
+        </record>
+		
+		 <record model="ir.ui.view" id="medical_patient_newborn_tree">
+			<field name="name">Newborn</field>
+            <field name="model">medical.newborn</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">                
+                <tree string="Newborn Information">
+                    <field name="name"/>
+                    <field name="newborn_name"/>
+                    <field name="mother"/>
+                    <field name="birth_date"/>
+                    <field name="sex"/>
+                    <field name="length"/>
+                    <field name="weight"/>
+                </tree>                
+            </field>
+        </record>
+		
+		<record id="open_medical_newborn_tree" model="ir.actions.act_window">
+            <field name="name">Newborn</field>
+            <field name="res_model">medical.newborn</field>
+            <field name="view_type">tree</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="medical_patient_newborn_tree"/>
+            <field name="domain">[]</field>            
+		</record>
+
+    	<record id="open_medical_newborn_list" model="ir.actions.act_window">
+			<field name="name">Newborn</field>
+			<field name="res_model">medical.newborn</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form,tree</field>
+			<field name="view_id" eval="False"/>		
+		</record>
+		
+		<record id="medical_action_form_newborn" model="ir.actions.act_window">
+				<field name="name">Newborn</field>
+				<field name="res_model">medical.newborn</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+				<field name="domain">[]</field>
+				<field name="context">{}</field>
+				<field name="view_id" eval="False"/>
+		</record>
+
+		<menuitem action="medical_action_form_newborn" id="medical_newborn_evaluation_menu" parent="medical_pediatrics_menu" sequence="11"/>	
+        				
+	</data>
+</openerp>

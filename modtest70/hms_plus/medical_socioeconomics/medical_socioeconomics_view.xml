@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+<openerp>
+        <data>
+
+<!-- Include the Socioeconomics page into the Patient History -->
+
+		<record model="ir.ui.view" id="medical_patient_view_socioeconomics">
+			<field name="name">Patient</field>
+			<field name="model">medical.patient</field>
+            <field name="inherit_id" ref="hms_plus.medical_patient_view" />
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<notebook>
+					<page string="Socioeconomics">
+						<notebook>
+							<page string="Main">
+								<group string="General">
+									<group>										
+										<field name="ses"/>										
+										<field name="education"/>										
+										<field name="housing"/>										
+										<field name="occupation"/>										
+									</group>										
+									<group>
+										<field name="works_at_home"/>
+										<field name="hours_outside"/>
+										<field name="hostile_area"/>
+									</group>
+								</group>
+								<group string="Infrastructure">
+									<group>
+										<field name="sewers"/>
+										<field name="water"/>
+										<field name="trash"/>
+										<field name="electricity"/>
+									</group>
+									<group>
+										<field name="gas"/>
+										<field name="telephone"/>
+										<field name="television"/>
+										<field name="internet"/>
+									</group>
+								</group>
+								<group string="Extra Info">
+									<field name="ses_notes" nolabel="1"/>
+								</group>								
+							</page>
+							<page string="Family">
+								<group string="Family APGAR">
+									<group>
+										<field name="fam_apgar_help"/>									
+										<field name="fam_apgar_discussion"/>									
+										<field name="fam_apgar_decisions"/>
+									</group>
+									<group>									
+										<field name="fam_apgar_timesharing"/>									
+										<field name="fam_apgar_affection"/>
+									</group>
+								</group>
+								<group string="Other Family Issues">
+									<group>
+										<field name="single_parent"/>
+										<field name="domestic_violence"/>
+										<field name="working_children"/>
+										<field name="teenage_pregnancy"/>
+										<field name="sexual_abuse"/>
+									</group>
+									<group>
+										<field name="drug_addiction"/>
+										<field name="school_withdrawal"/>
+										<field name="prison_past"/>
+										<field name="prison_current"/>
+										<field name="relative_in_prison"/>
+									</group>
+								</group>
+							</page>
+						</notebook>
+					</page>						
+				</notebook>
+			</field>
+		</record>
+	</data>
+</openerp>

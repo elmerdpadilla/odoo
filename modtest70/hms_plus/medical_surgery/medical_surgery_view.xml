@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<openerp>
+        <data>
+
+
+<!-- Surgery -->
+
+			<record model="ir.ui.view" id="medical_surgery_view">
+				<field name="name">Surgery Lists</field>
+				<field name="model">medical.surgery</field>
+				<field name="type">form</field>
+					<field name="arch" type="xml">
+						<form string="Surgery" version="7.0">
+							<sheet>
+								<group>
+									<group>
+										<field name="name"/>
+										<field name="description" required="1"/>							
+										<field name="pathology"/>
+										<field name="classification"/>
+									</group>
+									<group>							
+										<field name="date"/>
+										<field name="age"/>
+										<field name="surgeon"/>							
+										<field name="extra_info"/>
+									</group>
+								</group>
+							</sheet>
+						</form>
+					</field>
+			</record>
+
+			<record model="ir.ui.view" id="medical_surgery_tree">
+				<field name="name">Surgery Lists</field>
+				<field name="model">medical.surgery</field>
+				<field name="type">tree</field>
+				<field name="arch" type="xml">
+					<tree string="Surgery">
+						<field name="name"/>
+						<field name="description"/>
+						<field name="pathology"/>
+						<field name="classification"/>
+						<field name="date"/>
+					</tree>
+				</field>
+			</record>
+			
+			<record id="medical_action_surgery" model="ir.actions.act_window">
+            	<field name="name">Surgery Lists</field>
+				<field name="res_model">medical.surgery</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+				<field name="help" type="html">
+				  <p class="oe_view_nocontent_create">
+					Click to define a new surgery information or view existing once.
+				  </p>				  
+				</field>
+			</record>
+							
+			<menuitem action="medical_action_surgery" id="medical_surgery_unit" parent="hms_plus.medical_conf_surgery"/>
+					
+
+
+<!-- Procedure --> 
+			<record model="ir.ui.view" id="medical_procedure_view">
+				<field name="name">Procedure</field>
+				<field name="model">medical.procedure</field>
+				<field name="type">form</field>
+					<field name="arch" type="xml">
+						<form string="Procedure">
+							<field name="name"/>
+							<field name="description"/>
+						</form>
+					</field>
+			</record>
+
+			<record model="ir.ui.view" id="medical_procedure_tree">
+				<field name="name">Procedure List</field>
+				<field name="model">medical.procedure</field>
+				<field name="type">tree</field>
+				<field name="arch" type="xml">
+					<tree string="Procedure">
+						<field name="name"/>
+						<field name="description"/>
+					</tree>
+				</field>
+			</record>
+
+
+<!-- Include the Surgery page into the Patient History -->
+
+			<record model="ir.ui.view" id="medical_patient_view_inherit_surgery">
+				<field name="name">Patient</field>
+				<field name="model">medical.patient</field>
+				<field name="inherit_id" ref="hms_plus.medical_patient_view" />
+				<field name="type">form</field>
+				<field name="arch" type="xml">
+					<notebook position="inside">
+							<page string="Surgeries">
+								<group>
+									<field name="surgery" nolabel="1" widget="one2many_list"/>
+								</group>
+							</page>
+					</notebook>
+				</field>
+			</record>
+	</data>
+</openerp>
+
